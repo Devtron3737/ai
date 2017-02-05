@@ -20,6 +20,24 @@ probability of having cancer given that we just receiver a positive test
 
 Two Test cancer
 P(C|++) = what im looking for
-P(B|A) = 0.9 * 0.9 = 0.81
-P(A) = 0.01
-P(B) = (2 * 0.9) + (2 * 0.2) = 2.2
+given:
+P(C) = 0.01
+P(+|C) = 0.9 (probability of positive result while having cancer)
+P(-|-C) = 0.8 (probability of negative result while not having cancer)
+P(-C) = 0.99
+P(-|C) = 0.1
+P(+|-C) = 0.2
+
+Looking for P(C|++) (probability of cancer given 2 positive tests)
+
+Bayes: P(A|B) = [ P(B|A) * P(A) ] / P(B)
+
+(what are the chances of two positive tests)
+
+P'(C|++) = P(+|C) * P(C)
+         = 0.9 * 0.9 * 0.01 = 0.0081
+P'(-C|++) = P(+|-C) * P(-C)
+          = 0.2 * 0.2 * 0.99 = 0.0396
+(P'(C|++) + P'(-C|++)) ** -1 = 8.29
+
+.081 * 8.29 = 0.953
